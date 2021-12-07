@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Flask</title>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('nonfic') }}">Non-Fiction</a></li>
+            <li><a href="{{ url_for('fantasy') }}">Fantasy</a></li>
+            <li><a href="{{ url_for('philosophy') }}">Philosophy</a></li>
+            <li><a href="{{ url_for('mystery') }}">Mystery</a></li>
+            <li><a href="{{ url_for('shop') }}">Shop</a></li>
+        </ul>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+
+</html>
